@@ -1,7 +1,9 @@
 # Workshop
 
 # Maven 
-!["Maven"](images/maven.png)
+
+<img src="images/maven.png" width="300"></img>
+
 ```bash
 $ mvn spring-boot:run
 ```
