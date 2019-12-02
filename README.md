@@ -57,3 +57,9 @@ $ http :8080
       }
   }
 ```
+
+### Parar Docker
+```bash
+$ docker kill uca
+$ docker rm uca
+```
