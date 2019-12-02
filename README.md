@@ -67,3 +67,7 @@ $ docker rm uca
 ```
 
 # Docker-compose
+<img src="images/docker-compose.png" width="250"></img>
+
+# Kubernetes
+<img src="images/kubernetes.png" width="250"></img>
