@@ -68,6 +68,27 @@ $ docker rm uca
 
 # Docker-compose
 <img src="images/docker-compose.png" width="250"></img>
+## Start
+```bash
+$ docker-compose up -d
+Creating network "uca-1219_default" with the default driver
+Creating uca-1219_mariadb_1 ... done
+Creating uca-1219_ms-jpa-rest_1 ... done
+```
+## Logs
+```bash
+$ docker-compose logs -f
+```
+## Restart a service
+```bash
+$ docker-compose restart ms-jpa-rest
+Restarting uca-1219_ms-jpa-rest_1 ... done
+```
+
+## Delete stack
+```bash
+$ docker-compose down
+```
 
 # Kubernetes
 <img src="images/kubernetes.png" width="250"></img>
