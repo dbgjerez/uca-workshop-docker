@@ -1,24 +1,25 @@
 # Workshop
 
-# on premise
-## Maven
+# Maven
+!["Maven"](images/maven.png)
 ```bash
 $ mvn spring-boot:run
 ```
 
-## Java runtime
-### Compilado
+# Java runtime
+
+## Compilar
 ```bash
 $ mvn clean package
 ```
 
-### Ejecución
+## Ejecución
 ```bash
 $ java -jar target/jpa-rest-0.0.1-SNAPSHOT.jar
 ```
 
-## Docker runtime
-### Compilado
+# Docker runtime
+## Compilado
 ```bash
 $ mvn clean package docker:build
 ...
@@ -33,7 +34,7 @@ Successfully tagged com.dbg.uca/jpa-rest:latest
 [INFO] Total time:  19.782 s
 ```
 
-### Ejecución
+## Ejecución
 ```bash
 $ docker run -p 8080:8080 --name uca -d com.dbg.uca/jpa-rest
 $ http :8080
@@ -58,8 +59,10 @@ $ http :8080
   }
 ```
 
-### Parar Docker
+## Parar Docker
 ```bash
 $ docker kill uca
 $ docker rm uca
 ```
+
+# Docker-compose
