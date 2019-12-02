@@ -1,15 +1,13 @@
 # Workshop
 
 # Maven 
-
-<img src="images/maven.png" width="300"></img>
-
+<img src="images/maven.png" width="250"></img>
 ```bash
 $ mvn spring-boot:run
 ```
 
 # Java runtime
-!["Java"](images/openjdk.jpg)
+<img src="images/openjdk.jpg" width="250"></img>
 ## Compilar
 ```bash
 $ mvn clean package
@@ -21,7 +19,7 @@ $ java -jar target/jpa-rest-0.0.1-SNAPSHOT.jar
 ```
 
 # Docker runtime
-!["Docker"](images/docker.png)
+<img src="images/docker.png" width="250"></img>
 ## Compilado
 ```bash
 $ mvn clean package docker:build
