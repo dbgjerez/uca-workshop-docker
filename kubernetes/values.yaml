@@ -1,0 +1,56 @@
+namespace: default
+replicaCount: 5
+spring:
+  profiles: "k8s"
+image:
+  repository: b0rr3g0/uca-workshop
+  tag: latest
+  pullPolicy: Always
+
+nameOverride: "ms-jpa-rest"
+fullnameOverride: "ms-jpa-rest"
+service:
+  type: ClusterIP
+  port: 80
+
+ingress:
+  enabled: false
+  annotations: {}
+  # kubernetes.io/ingress.class: nginx
+  # kubernetes.io/tls-acme: "true"
+  paths: []
+  hosts:
+    - chart-example.local
+  tls: []
+  #  - secretName: chart-example-tls
+  #    hosts:
+  #      - chart-example.local
+
+resources:
+  limits:
+    cpu: 900m
+    memory: 512Mi
+  requests:
+    cpu: 500m
+    memory: 512Mi
+
+nodeSelector: {}
+
+tolerations: []
+
+affinity: {}
+
+bbdd:
+  secret:
+    name: "secret-mariadb"
+    root_password: "changeMe"
+    replication_password: "changeMe"
+    password: "changeMe"
+    root_username: "cm9vdA=="
+
+### Dependencies configuration
+mariadb:
+  enabled: true
+  existingSecret: "secret-mariadb"
+  replication:
+    enabled: false
